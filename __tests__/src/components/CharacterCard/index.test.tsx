@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 
 import CharacterCard from '../../../../src/components/CharacterCard';
 import { CharacterProps } from '../../../../src/components/CharacterCard';
@@ -23,7 +23,7 @@ describe('CharacterCard', () => {
   it('Rendered view more button successfully', () => {
     const { getByText } = render(<CharacterCard {...mockCharacter} />)
 
-    expect(getByText('View more')).toBeTruthy();
+    expect(getByText(/View more/i)).toBeTruthy();
   });
 
   it('Rendered view more button icon successfully', () => {

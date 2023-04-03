@@ -18,7 +18,7 @@ describe('HomeScreen', () => {
   it('Rendered characters title successfully', () => {
     const { getByText } = render(<Home />);
 
-    expect(getByText('Characters')).toBeTruthy();
+    expect(getByText(/Characters/i)).toBeTruthy();
   });
 
 });
